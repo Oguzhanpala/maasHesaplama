@@ -32,11 +32,14 @@ public class Employee {
 	}
 
 	double raiseSalary() {
-		if (this.hireYear < 10) {
+		int currentYear=2021;
+		int yearsWorked=currentYear-hireYear;
+		
+		if (yearsWorked < 10) {
 			return salary * 0.05;
-		} else if (this.hireYear > 9 && this.hireYear < 20) {
+		} else if (yearsWorked> 9 && yearsWorked < 20) {
 			return salary * 0.10;
-		} else if (this.hireYear > 19) {
+		} else if (yearsWorked > 19) {
 			return salary * 0.15;
 		}
 		return 0;
